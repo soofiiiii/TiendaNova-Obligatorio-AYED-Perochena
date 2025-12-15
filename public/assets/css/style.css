@@ -1,0 +1,184 @@
+/* ===============================================
+   🎨 PALETA / VARIABLES
+   =============================================== */
+:root {
+  --bg: #0f172a;
+  --fg: #e5e7eb;
+  --muted: #94a3b8;
+  --brand: #22d3ee;
+  --card: #111827;
+  --accent: #34d399;
+
+  --indigo-50: #eef2ff;
+  --indigo-100: #e0e7ff;
+  --indigo-600: #4f46e5;
+  --indigo-700: #4338ca;
+}
+
+/* ===============================================
+   🧩 RESET + BASE
+   =============================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.5 'Inter', system-ui, sans-serif;
+}
+
+a {
+  color: var(--brand);
+  text-decoration: none;
+}
+
+/* ===============================================
+   🔹 NAV LINKS (TRADUCCIÓN SIN @apply)
+   =============================================== */
+.nav-link-light {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  color: #374151; /* gray-700 */
+  font-weight: 500;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  transition: all 0.2s;
+  margin-bottom: 10px;
+}
+
+.nav-link-light:hover {
+  background: var(--indigo-50);
+  color: var(--indigo-600);
+}
+
+/* Activa */
+.nav-link-active {
+  background: var(--indigo-100);
+  color: var(--indigo-700);
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+/* ===============================================
+   🔹 BOTÓN PRIMARIO (TRADUCCIÓN SIN @apply)
+   =============================================== */
+.btn-primary-light {
+  background: var(--indigo-600);
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+  transition: background 0.3s;
+}
+
+.btn-primary-light:hover {
+  background: var(--indigo-700);
+}
+
+/* ===============================================
+   🔹 TOPBAR Y CONTENEDOR
+   =============================================== */
+.topbar {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding: 12px 20px;
+  background: #0b1220;
+  border-bottom: 1px solid #1f2937;
+}
+
+.brand {
+  font-weight: 700;
+}
+
+.container {
+  max-width: 980px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/* ===============================================
+   🔹 BOTONES, CHIPS, FORMULARIOS
+   =============================================== */
+.btn {
+  display: inline-block;
+  background: var(--brand);
+  color: #051019;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.pill {
+  margin-left: 8px;
+  border: 1px solid var(--muted);
+  padding: 2px 8px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form input,
+.form textarea,
+.form select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #1f2937;
+  background: #0b1220;
+  color: var(--fg);
+}
+
+/* GRID 2 COLUMNAS */
+.form.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* ===============================================
+   🔹 LISTAS, TABLAS, ÁRBOLES
+   =============================================== */
+.tree {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background: #0b1220;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tabla th,
+.tabla td {
+  padding: 10px;
+  border-bottom: 1px solid #1f2937;
+}
+
+/* ===============================================
+   🔹 FOOTER
+   =============================================== */
+.footer {
+  padding: 20px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.hint {
+  color: var(--muted);
+}
+
